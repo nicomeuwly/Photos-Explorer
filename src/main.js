@@ -98,7 +98,7 @@ function setMusicIconPaused() {
 if (musicToggleBtn) musicToggleBtn.addEventListener("click", toggleMusic);
 
 // --- Diaporama ---
-// Affiche une nouvelle photo et planifie la suivante (mais n'écrit jamais de timers si paused)
+// Affiche une nouvelle photo et planifie la suivante
 function showNextPhoto() {
   if (!images.length || slideshowPaused) return;
 
@@ -126,8 +126,8 @@ function showNextPhoto() {
     left: "50%",
     transform: "translate(-50%, -50%) scale(0.5) rotate(-10deg)",
     transformOrigin: "center center",
-    maxWidth: "90%",
-    maxHeight: "90%",
+    width: "auto",
+    height: "90%",
     opacity: 0,
     // si on est actuellement en pause, démarrer en paused (si on resume on remet en running)
     animationPlayState: slideshowPaused ? "paused" : "running",
